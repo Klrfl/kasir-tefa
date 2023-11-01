@@ -1,3 +1,0 @@
-Tabel 'Barang' bagian 'Harga_barang' diubah tipe nya, dari Varchar menjadi Int
-
-
