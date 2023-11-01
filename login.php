@@ -27,7 +27,7 @@ if (isset($_SESSION['status'])) {
 <html lang="en">
 
 <head>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="assets/favicon.ico">
     <link rel="icon" href="icon.ico" type="image/ico">
     <title>Login</title>
     <meta charset="utf-8">
