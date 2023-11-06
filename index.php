@@ -328,6 +328,14 @@ $jsArray1 = "var nama_barang = new Array();";
       ?>
     </div>
     <!-- end tes -->
+    <?php
+    include 'config.php';
+    if (!empty($_GET['id'])) {
+      $id = $_GET['id'];
+      $hapus_data = mysqli_query($conn, "DELETE FROM keranjang WHERE id_cart ='$id'");
+      echo '<script>window.location="index.php"</script>';
+    }
+    ?>
   </div><!-- end row col-md-9 -->
 
   <!-- MENU KATEGORI DAN KLIK PESANAN -->
@@ -508,8 +516,6 @@ $jsArray1 = "var nama_barang = new Array();";
   }
 
   function masukkanKodeBarang(kode, nama, harga) {
-
-    // var kodeBarang = 
     document.getElementById("kodeBarangInput").value = kode;
     document.getElementById("nama_barang").value = nama;
     document.getElementById("harga_barang").value = harga;
@@ -534,14 +540,6 @@ $jsArray1 = "var nama_barang = new Array();";
 
   // FINALLLL
 </script>
-<?php
-include 'config.php';
-if (!empty($_GET['id'])) {
-  $id = $_GET['id'];
-  $hapus_data = mysqli_query($conn, "DELETE FROM keranjang WHERE id_cart ='$id'");
-  echo '<script>window.location="index.php"</script>';
-}
-?>
 
 <?php include 'template/footer.php'; ?>
 
